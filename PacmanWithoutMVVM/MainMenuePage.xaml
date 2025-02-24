@@ -1,0 +1,139 @@
+﻿<Page x:Class="PacmanWithoutMVVM.MainMenuePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PacmanWithoutMVVM"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainMenuePage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+    <RowDefinition Height="10*"/>
+</Grid.RowDefinitions>
+<Grid.ColumnDefinitions>
+    <ColumnDefinition Width="Auto"/>
+    <ColumnDefinition/>
+</Grid.ColumnDefinitions>
+<Image x:Name="hintergrund" Grid.Column="1" Source="C:\Users\Mia Marjanovic\source\repos\PacMan\PacMan\Images\pacman_map.png" HorizontalAlignment="Right"/>
+<Grid Grid.ColumnSpan="2">
+    <Grid x:Name="Farbverlauf" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Stroke="Black" Fill="Black" Opacity="0.85"/>
+        <Rectangle Grid.Column="1" Stroke="Black" Fill="Black" Opacity="0.8"/>
+        <Rectangle Stroke="Black" Grid.Column="2" Fill="Black" Opacity="0.75"/>
+        <Rectangle Stroke="Black" Grid.Column="3" Fill="Black" Opacity="0.7"/>
+        <Rectangle Stroke="Black" Grid.Column="4" Fill="Black" Opacity="0.65"/>
+        <Rectangle Stroke="Black" Grid.Column="5" Fill="Black" Opacity="0.6"/>
+        <Rectangle Stroke="Black" Grid.Column="6" Fill="Black" Opacity="0.55"/>
+        <Rectangle Stroke="Black" Grid.Column="7" Fill="Black" Opacity="0.5"/>
+        <Rectangle Stroke="Black" Grid.Column="8" Fill="Black" Opacity="0.45"/>
+        <Rectangle Stroke="Black" Grid.Column="9" Fill="Black" Opacity="0.4"/>
+        <Rectangle Stroke="Black" Grid.Column="10" Fill="Black" Opacity="0.35"/>
+        <Rectangle Stroke="Black" Grid.Column="11" Fill="Black" Opacity="0.3"/>
+        <Grid Grid.ColumnSpan="12" HorizontalAlignment="Left" Height="564" Margin="10,0,0,0" VerticalAlignment="Center" Width="780">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Rectangle Grid.Column="12" Fill="Black" Opacity="0.25"/>
+        <Rectangle Grid.Column="13" Fill="Black" Opacity="0.1"/>
+
+    </Grid>
+</Grid>
+<Grid Grid.Row="1" Grid.Column="1">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="4.3*"/>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="2*"/>
+        <RowDefinition/>
+        <RowDefinition Height="2*"/>
+        <RowDefinition/>
+        <RowDefinition Height="2*"/>
+        <RowDefinition/>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="2*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition Width="3*"/>
+        <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <Button x:Name="btn_leave" Grid.Column="1" Content="LEAVE" Grid.Row="9" Background="#FFFFD100" Margin="60,0,60,0" Opacity="0.7" FontSize="36" FontFamily="Bauhaus 93" FontWeight="Bold" Click="btn_leave_Click">
+        <Button.Template>
+            <ControlTemplate TargetType="{x:Type Button}">
+                <Border Background="#FFFFD100" CornerRadius="30">
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+    <Button x:Name="btn_skins" Grid.Column="1" Content="SKINS" Grid.Row="7" Margin="60,0,60,0" Background="#FFFFD100" Opacity="0.7" FontSize="36" FontFamily="Bauhaus 93" FontWeight="Bold" Click="btn_skins_Click">
+        <Button.Effect>
+            <DropShadowEffect/>
+        </Button.Effect>
+        <Button.Template>
+            <ControlTemplate TargetType="{x:Type Button}">
+                <Border Background="#FFFFD100"
+                         CornerRadius="30">
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+    <Button x:Name="Ranking" Grid.Column="1" Content="RANKING" Grid.Row="5" Margin="60,0,60,0" Background="#FFFFD100" Opacity="0.7" FontSize="36" FontFamily="Bauhaus 93" FontWeight="Bold" Click="Ranking_Click">
+        <Button.Effect>
+            <DropShadowEffect/>
+        </Button.Effect>
+        <Button.Template>
+            <ControlTemplate TargetType="{x:Type Button}">
+                <Border Background="#FFFFD100"  CornerRadius="30">
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+    <Button x:Name="btn_play" Grid.Column="1" Content="PLAY" Grid.Row="3" Margin="60,0,60,0" Background="#FFFFD100" Opacity="0.7" FontFamily="Bauhaus 93" FontSize="36" FontWeight="Bold" Click="btn_play_Click">
+        <Button.Effect>
+            <DropShadowEffect/>
+        </Button.Effect>
+        <Button.Template>
+            <ControlTemplate TargetType="{x:Type Button}">
+                <Border Background="#FFFFD100" CornerRadius="30">
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+            <Rectangle Grid.Column="1" Grid.Row="1" Stroke="#FFC31A1F" StrokeThickness="9.5" RadiusX="25" RadiusY="25" Opacity="0.85">
+        <Rectangle.Effect>
+            <DropShadowEffect/>
+        </Rectangle.Effect>
+        <Rectangle.Fill>
+            <ImageBrush ImageSource="C:\Users\Mia Marjanovic\source\repos\PacMan\PacMan\Images\Pac-Man-Logo_Orange.png" Stretch="Fill"/>
+        </Rectangle.Fill>
+    </Rectangle>
+
+</Grid>
+    </Grid>
+</Page>
