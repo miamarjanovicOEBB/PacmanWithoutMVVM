@@ -341,7 +341,6 @@ namespace PacmanWithoutMVVM
                         goDown = false;
                     }
 
-
                     if (goUp && pacmanHitBox.IntersectsWith(hitBox)) //oben
                     {
                         Canvas.SetTop(pacman, Canvas.GetTop(pacman) + 2);
